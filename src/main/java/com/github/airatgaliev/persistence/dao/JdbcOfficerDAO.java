@@ -14,8 +14,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class JdbcOfficerDAO implements OfficerDAO {
 
-  private JdbcTemplate jdbcTemplate;
-  private SimpleJdbcInsert simpleJdbcInsert;
+  private final JdbcTemplate jdbcTemplate;
+  private final SimpleJdbcInsert simpleJdbcInsert;
 
   public JdbcOfficerDAO(JdbcTemplate jdbcTemplate) {
     this.jdbcTemplate = jdbcTemplate;
